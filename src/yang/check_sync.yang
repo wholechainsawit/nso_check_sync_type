@@ -13,14 +13,6 @@ module check_sync {
     prefix ncs;
   }
 
-  description
-    "Per Service Type Check-sync";
-
-  revision 2021-01-28 {
-    description
-      "Initial revision.";
-  }
-
   augment "/ncs:services" {
     tailf:action get-services {
       tailf:actionpoint check-sync-get-services;
@@ -28,59 +20,6 @@ module check_sync {
         list service {
           leaf path {
             type string;
-          }
-        }
-      }
-    }
-
-    tailf:action check-sync-type {
-      tailf:actionpoint check-sync;
-      input {
-        leaf-list services {
-          type string;
-        }
-        leaf outformat {
-          type ncs:outformat4;
-          default native;
-        }
-      }
-      output {
-        leaf error{
-          type string;
-        }
-        list sync-result {
-          leaf service-id {
-            type string;
-          }
-          leaf error{
-            type string;
-          }
-          leaf in_sync {
-            type string;
-          }
-          container native {
-            list device {
-              key name;
-              leaf name {
-                type string;
-              }
-              leaf data {
-                tailf:cli-preformatted;
-                type string;
-              }
-            }
-          }
-          container cli {
-            leaf data {
-              tailf:cli-preformatted;
-              type string;
-            }
-          }
-          container result-xml {
-            leaf data {
-              tailf:cli-preformatted;
-              type string;
-            }
           }
         }
       }
