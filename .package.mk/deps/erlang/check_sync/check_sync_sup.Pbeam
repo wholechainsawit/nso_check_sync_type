@@ -1,0 +1,2 @@
+erlang-lib/check_sync/ebin/check_sync_sup.beam: \
+  erlang-lib/check_sync/src/check_sync_sup.erl

@@ -1,0 +1,5 @@
+erlang-lib/check_sync/ebin/check_sync_server.beam: \
+  erlang-lib/check_sync/src/check_sync_server.erl \
+  /home/leeho2c/ncs-5.2.2.1/erlang/econfd/include/econfd.hrl
+
+/home/leeho2c/ncs-5.2.2.1/erlang/econfd/include/econfd.hrl:

@@ -1,0 +1,13 @@
+<ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
+  <name>check-sync-type</name>
+  <package-version>2.0</package-version>
+  <description>Per Service Type Check-sync</description>
+  <ncs-min-version>5.2</ncs-min-version>
+
+  <component>
+    <name>main</name>
+    <application>
+      <python-class-name>check_sync.main.Main</python-class-name>
+    </application>
+  </component>
+</ncs-package>
